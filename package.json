@@ -1,11 +1,11 @@
 {
-  "name": "monzo",
+  "name": "nodejs-template",
   "version": "1.0.0",
   "main": "dist/main.js",
   "type": "module",
   "scripts": {
-    "start": "node --import tsx dist/main.js -s 'https://monzo.com'",
-    "start:dev": "tsc --noEmit && tsx --inspect src/main.ts -s 'https://monzo.com' --logLevel trace | pino-pretty --singleLine --messageFormat '{class} - {msg}'",
+    "start": "node --import tsx dist/main.js",
+    "start:dev": "tsc --noEmit && tsx --inspect src/main.ts",
     "test": "jest --detectOpenHandles",
     "build": "tsc --build",
     "type-check": "tsc --noEmit",
