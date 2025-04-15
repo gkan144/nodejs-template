@@ -1,0 +1,22 @@
+@startuml monzo-web-crawler
+
+node "UrlScheduler" {
+  [Readable] as usr
+  [Writable] as usw
+}
+
+node "UrlDownloader" as ud
+node "HashGenerator" as hg
+node "HashChecker" as hc
+node "ContentParser" as cp
+node "LinkFilter" as lf
+
+usr -> ud
+ud -> hg
+hg -> hc
+hc -> cp
+cp -> lf
+lf -> usw
+usw --> usr
+
+@enduml

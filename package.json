@@ -1,0 +1,52 @@
+{
+  "name": "monzo",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --import tsx dist/main.js -s 'https://monzo.com'",
+    "start:dev": "tsc --noEmit && tsx --inspect src/main.ts -s 'https://monzo.com' --logLevel trace | pino-pretty --singleLine --messageFormat '{class} - {msg}'",
+    "test": "jest --detectOpenHandles",
+    "build": "tsc --build",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint '{src,test}/**/*.ts'",
+    "format": "prettier --write '{src,test}/**/*.ts'",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "engines": {
+    "node": "^22.14.0",
+    "npm": "^10.9.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@faker-js/faker": "^9.5.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.5",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jest": "^28.11.0",
+    "eslint-plugin-n": "^17.15.1",
+    "eslint-plugin-promise": "^7.2.1",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.4.3",
+    "nodemon": "^3.1.9",
+    "pino-pretty": "^13.0.0",
+    "prettier": "^3.5.2",
+    "ts-jest": "^29.2.6",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1"
+  },
+  "dependencies": {
+    "node-html-parser": "^7.0.1",
+    "pino": "^9.6.0",
+    "yargs": "^17.7.2"
+  }
+}
