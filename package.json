@@ -45,7 +45,6 @@
     "typescript-eslint": "^8.24.1"
   },
   "dependencies": {
-    "node-html-parser": "^7.0.1",
     "pino": "^9.6.0",
     "yargs": "^17.7.2"
   }
